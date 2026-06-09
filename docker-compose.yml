@@ -1,0 +1,12 @@
+
+services:
+  ids-snort:
+    image: alpine:latest
+    container_name: ids-snort
+    network_mode: bridge
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./mysnort.rules:/etc/snort/rules/mysnort.rules
+    command: /bin/sh -c "apk update && apk add snort && mkdir -p /etc/snort/rules && tail -f /dev/null"
+
