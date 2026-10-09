@@ -1,0 +1,4 @@
+# Videos are hosted on YouTube, not in the repository
+*.mp4
+*.mov
+*.mkv
